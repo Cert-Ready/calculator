@@ -15,28 +15,55 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
-    <div class="calculator">
-      <div class="screen">0</div>
-      <button>AC</button>
-      <button><i class="fa-solid fa-arrow-left"></i></button>
-      <button><i class="fa-solid fa-divide"></i></button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button><i class="fa-solid fa-xmark"></i></button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button><i class="fa-solid fa-minus"></i></button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button><i class="fa-solid fa-plus"></i></button>
-      <button>0</button>
-      <button>.</button>
-      <button><i class="fa-solid fa-equals"></i></button>
-    </div>
+  <body class="flex-column">
+    <header>
+      <h1 class="hero"><i class="fa-solid fa-calculator"></i> Calculator</h1>
+    </header>
+
+    <main>
+      <div class="calculator">
+        <div class="calc-screen">0</div>
+        <div class="calc-buttons">
+          <div class="button-row">
+            <button class="buttonV01 calc-clear">AC</button>
+            <button class="buttonV01 calc-delete">←</button>
+            <button class="buttonV01 calc-operator">÷</button>
+          </div>
+          <div class="button-row">
+            <button class="buttonV01 calc-number">7</button>
+            <button class="buttonV01 calc-number">8</button>
+            <button class="buttonV01 calc-number">9</button>
+            <button class="buttonV01 calc-operator">x</button>
+          </div>
+          <div class="button-row">
+            <button class="buttonV01 calc-number">4</button>
+            <button class="buttonV01 calc-number">5</button>
+            <button class="buttonV01 calc-number">6</button>
+            <button class="buttonV01 calc-operator">-</button>
+          </div>
+          <div class="button-row">
+            <button class="buttonV01 calc-number">1</button>
+            <button class="buttonV01 calc-number">2</button>
+            <button class="buttonV01 calc-number">3</button>
+            <button class="buttonV01 calc-operator">+</button>
+          </div>
+          <div class="button-row">
+            <button class="buttonV01 calc-number">0</button>
+            <button class="buttonV01 calc-decimal">.</button>
+            <button class="buttonV01 calc-result">=</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://github.com/Cert-Ready" class="buttonV02">
+          <i class="fa-brands fa-github"></i> Cert-Ready
+        </a>
+      </p>
+    </footer>
+
     <script src="./js/index.js"></script>
   </body>
 </html>

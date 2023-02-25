@@ -1,0 +1,159 @@
+/* Google Font
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+/* Custom Variables
+   ========================================================================== */
+:root {
+  /* font */
+  --pri-font: 'Ubuntu', sans-serif;
+
+  /* size */
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 1rem;
+  --size-4: 1.25rem;
+  --size-5: 1.5rem;
+  --size-6: 1.75rem;
+  --size-7: 2rem;
+  --size-8: 3rem;
+  --size-9: 4rem;
+  --size-10: 5rem;
+  --size-11: 15rem;
+  --size-fluid-1: clamp(1.5rem, 3vw, 2rem);
+  --size-fluid-2: clamp(4rem, 5vw, 5rem);
+
+  /* color */
+  --light-0: hsl(210, 17%, 98%);
+  --dark-0: hsl(216, 16%, 6%);
+  --accent-0: #07a08b;
+  --accent-1: #89eda3;
+  --accent-2: #e41a10;
+  --pri-grad: linear-gradient(-45deg, var(--accent-0), var(--accent-1));
+  --sec-grad: linear-gradient(45deg, var(--accent-0), var(--accent-1));
+
+  /* misc*/
+  --pri-brd-rad: var(--size-3);
+  --pri-outline-offset: 2px;
+  --pri-transition: 250ms;
+}
+
+/* Core body defaults
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--pri-font);
+  background-color: var(--dark-0);
+  min-height: 100vh;
+  text-align: center;
+  color: var(--light-0);
+}
+
+footer {
+  margin-top: auto;
+}
+
+.hero {
+  font-size: var(--size-fluid-1);
+}
+
+/* style calculator
+========================================================================== */
+.calculator {
+  border: 1px solid var(--light-0);
+  border-radius: var(--pri-brd-rad);
+  max-width: 350px;
+  margin: auto;
+}
+
+.calc-screen {
+  background-color: var(--accent-0);
+  background-image: var(--pri-grad);
+  border-bottom: 1px solid var(--accent-1);
+  border-top-left-radius: var(--pri-brd-rad);
+  border-top-right-radius: var(--pri-brd-rad);
+  color: var(--light-0);
+  font-size: var(--size-fluid-2);
+  font-weight: 700;
+  padding: var(--size-8) var(--size-4) var(--size-3);
+  text-align: right;
+}
+
+.calc-buttons {
+  padding: var(--size-2);
+  background-color: var(--light-0);
+  border-bottom-left-radius: var(--pri-brd-rad);
+  border-bottom-right-radius: var(--pri-brd-rad);
+}
+
+.button-row {
+  display: flex;
+}
+
+.calc-clear,
+.calc-result {
+  flex-basis: 50%;
+}
+
+.calc-delete {
+  flex-basis: 25%;
+}
+
+.calc-number,
+.calc-operator,
+.calc-decimal {
+  flex-basis: 25%;
+}
+
+.buttonV01 {
+  padding: var(--size-2);
+  background-color: var(--light-0);
+  /* border: 1px solid var(--dark-0); */
+  border: none;
+  font-size: var(--size-fluid-1);
+  border-radius: var(--pri-brd-rad);
+  margin: var(--size-1);
+  display: block;
+  cursor: pointer;
+  transition: all var(--pri-transition);
+}
+
+.buttonV02 {
+  text-decoration: none;
+  color: var(--accent-0);
+  max-width: 200px;
+  margin: auto;
+}
+
+.calc-clear {
+  color: var(--accent-2);
+}
+
+.calc-delete,
+.calc-operator {
+  color: var(--accent-0);
+}
+
+.calc-result {
+  background-color: var(--accent-0);
+  background-image: var(--pri-grad);
+  color: var(--light-0);
+}
+
+/* button hover effects
+========================================================================== */
+*:focus,
+.buttonV01:hover {
+  background-color: var(--accent-0);
+  background-image: var(--sec-grad);
+  color: var(--light-0);
+}
+
+/* utility class
+========================================================================== */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
