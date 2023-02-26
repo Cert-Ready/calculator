@@ -117,13 +117,18 @@ function roundNumber(number) {
   return Math.round(number * 100000000) / 100000000;
 }
 
-clearBtn.addEventListener('click', () => {
+clearBtn.addEventListener('click', handleClear);
+
+function handleClear() {
   buffer = '';
   currentNumber = '';
   operator = '';
   previousDisplayNumber.textContent = '';
   currentDisplayNumber.textContent = '0';
-});
+  // console.log(buffer);
+  // console.log(currentNumber);
+  // console.log(operator);
+}
 
 function operatorCheck(check) {
   operator = check;
@@ -141,9 +146,9 @@ function handleDecimal() {
   }
 }
 
-deleteBtn.addEventListener('click', deleteNumber);
+deleteBtn.addEventListener('click', handleDelete);
 
-function deleteNumber() {
+function handleDelete() {
   if (currentNumber.length == 1) {
     currentNumber = '0';
     currentDisplayNumber.textContent = currentNumber;
@@ -151,5 +156,46 @@ function deleteNumber() {
     let string = currentDisplayNumber.textContent;
     currentNumber = string.substring(0, string.length - 1);
     currentDisplayNumber.textContent = currentNumber;
+  }
+}
+
+window.addEventListener('keydown', handleKeyPress);
+
+function handleKeyPress(e) {
+  e.preventDefault();
+
+  let eKey = e.key;
+
+  if (eKey >= 0 && eKey <= 9) {
+    handleNumber(eKey);
+  }
+
+  switch (eKey) {
+    case '/':
+      handleOperator('÷');
+      break;
+    case '*':
+      handleOperator('x');
+      break;
+    case '-':
+      handleOperator(eKey);
+      break;
+    case '+':
+      handleOperator(eKey);
+      break;
+    case 'Enter':
+      if (currentNumber != '' && buffer != '') {
+        calculate(eKey);
+      }
+      break;
+    case 'Backspace':
+      handleDelete();
+      break;
+    case 'Delete':
+      handleClear();
+      break;
+    case '.':
+      handleDecimal();
+      break;
   }
 }
