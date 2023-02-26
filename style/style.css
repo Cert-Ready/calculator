@@ -20,7 +20,6 @@
   --size-10: 5rem;
   --size-11: 15rem;
   --size-fluid-1: clamp(1.5rem, 3vw, 2rem);
-  --size-fluid-2: clamp(4rem, 5vw, 5rem);
 
   /* color */
   --light-0: hsl(210, 17%, 98%);
@@ -75,10 +74,15 @@ footer {
   border-top-left-radius: var(--pri-brd-rad);
   border-top-right-radius: var(--pri-brd-rad);
   color: var(--light-0);
-  font-size: var(--size-fluid-2);
+  font-size: var(--size-fluid-1);
   font-weight: 700;
   padding: var(--size-8) var(--size-4) var(--size-3);
   text-align: right;
+}
+
+.previous-number,
+.current-number{
+  height: 2rem;
 }
 
 .calc-buttons {
