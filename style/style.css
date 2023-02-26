@@ -24,6 +24,8 @@
   /* color */
   --light-0: hsl(210, 17%, 98%);
   --dark-0: hsl(216, 16%, 6%);
+  --pri-color: var(--light-0);
+  --sec-color: var(--dark-0);
   --accent-0: #07a08b;
   --accent-1: #89eda3;
   --accent-2: #e41a10;
@@ -44,10 +46,10 @@
 
 body {
   font-family: var(--pri-font);
-  background-color: var(--dark-0);
+  background-color: var(--sec-color);
   min-height: 100vh;
   text-align: center;
-  color: var(--light-0);
+  color: var(--pri-color);
 }
 
 footer {
@@ -61,7 +63,7 @@ footer {
 /* style calculator
 ========================================================================== */
 .calculator {
-  border: 1px solid var(--light-0);
+  border: 1px solid var(--pri-color);
   border-radius: var(--pri-brd-rad);
   max-width: 350px;
   margin: auto;
@@ -73,7 +75,7 @@ footer {
   border-bottom: 1px solid var(--accent-1);
   border-top-left-radius: var(--pri-brd-rad);
   border-top-right-radius: var(--pri-brd-rad);
-  color: var(--light-0);
+  color: var(--pri-color);
   font-size: var(--size-fluid-1);
   font-weight: 700;
   padding: var(--size-8) var(--size-4) var(--size-3);
@@ -81,13 +83,13 @@ footer {
 }
 
 .previous-number,
-.current-number{
+.current-number {
   height: 2rem;
 }
 
 .calc-buttons {
   padding: var(--size-2);
-  background-color: var(--light-0);
+  background-color: var(--pri-color);
   border-bottom-left-radius: var(--pri-brd-rad);
   border-bottom-right-radius: var(--pri-brd-rad);
 }
@@ -113,8 +115,8 @@ footer {
 
 .buttonV01 {
   padding: var(--size-2);
-  background-color: var(--light-0);
-  /* border: 1px solid var(--dark-0); */
+  background-color: var(--pri-color);
+  /* border: 1px solid var(--sec-color); */
   border: none;
   font-size: var(--size-fluid-1);
   border-radius: var(--pri-brd-rad);
@@ -122,6 +124,7 @@ footer {
   display: block;
   cursor: pointer;
   transition: all var(--pri-transition);
+  color: var(--sec-color);
 }
 
 .buttonV02 {
@@ -143,7 +146,7 @@ footer {
 .calc-result {
   background-color: var(--accent-0);
   background-image: var(--pri-grad);
-  color: var(--light-0);
+  color: var(--pri-color);
 }
 
 /* button hover effects
@@ -152,7 +155,7 @@ footer {
 .buttonV01:hover {
   background-color: var(--accent-0);
   background-image: var(--sec-grad);
-  color: var(--light-0);
+  color: var(--pri-color);
 }
 
 /* utility class
@@ -160,4 +163,28 @@ footer {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+/* dark mode toggle
+========================================================================== */
+.dark-mode-toggle {
+  border-radius: var(--pri-brd-rad);
+  border: 1px solid var(--pri-color);
+  cursor: pointer;
+  margin: var(--size-3) auto;
+  max-width: 80px;
+  padding: var(--size-3);
+}
+
+.fa-solid {
+  font-size: var(--size-6);
+}
+
+#hidden {
+  display: none;
+}
+
+.dark-mode {
+  --pri-color: var(--dark-0);
+  --sec-color: var(--light-0);
 }

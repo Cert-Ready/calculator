@@ -17,7 +17,10 @@
   </head>
   <body class="flex-column">
     <header>
-      <h1 class="hero"><i class="fa-solid fa-calculator"></i> Calculator</h1>
+      <div class="dark-mode-toggle" aria-label="toggle dark mode">
+        <i class="fa-solid fa-moon" id="hidden"></i>
+        <i class="fa-solid fa-sun"></i>
+      </div>
     </header>
 
     <main>
@@ -67,6 +70,7 @@
       </p>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/calculator.js"></script>
+    <script src="./js/darkMode.js"></script>
   </body>
 </html>

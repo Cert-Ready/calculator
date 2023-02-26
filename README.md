@@ -3,7 +3,7 @@ Calculator - The Odin Project Foundations
 
 ## About
 - Simple calculator app following The Odin Project Foundations
-    -[Link to Assignment](https://www.theodinproject.com/lessons/foundations-calculator)
+    - [Link to Assignment](https://www.theodinproject.com/lessons/foundations-calculator)
 
 - External Code
   - [Normalize.css v8.0.1](https://necolas.github.io/normalize.css/)
